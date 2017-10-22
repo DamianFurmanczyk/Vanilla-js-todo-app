@@ -1,0 +1,49 @@
+* {
+  --yell: #FFFA6E;
+  --whitish: #F4F4F6;
+  --black: #2B2B2B;
+}
+
+.taskbar {
+  line-height: 40px;
+  font-size: 30px;
+  margin-top: 10%;
+}
+
+.taskbar-inputbox {
+  position: relative;
+}
+
+.taskbar-inputbox:hover > .taskbar-btn {
+  opacity: .6;
+}
+
+.taskbar-input {
+  text-align: center;
+  color: var(--yell);
+  border: 0px !important;
+  background: transparent !important;
+  border-radius: 0px !important;
+  border-bottom: 2px solid var(--whitish) !important;
+  box-sizing: border-box;
+  width: 100%;
+}
+
+.taskbar-input:focus + .taskbar-btn {
+  opacity: .6;
+}
+
+.taskbar-btn {
+  cursor: pointer;
+  opacity: 0.3;
+  color: var(--whitish);
+  position: absolute;
+  right: 10px;
+  top: 0px;
+  transition-duration: .25s;
+}
+
+.taskbar-btn:hover {
+  opacity: 0.85 !important;
+  color: var(--yell);
+}

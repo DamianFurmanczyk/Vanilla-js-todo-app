@@ -1,0 +1,51 @@
+@import 'normalize.css';
+@import 'skeleton.css';
+@import 'fa-css/font-awesome.min.css';
+@import url('https://fonts.googleapis.com/css?family=Bitter|Raleway');
+
+/* blocks */
+
+@import 'taskbar.css';
+
+/* general */
+
+* {
+  --yell: #FFFA6E;
+  --whitish: #F4F4F6;
+  --black: #2B2B2B;
+}
+
+body {
+  font-family: 'Raleway', sans-serif;
+  background: var(--black);
+}
+
+::selection {
+  color: var(--whitish);
+  background: var(--yell);
+}
+
+h1, h2, h3 {
+  font-family: 'Bitter', serif;
+}
+
+/* components */
+
+button {
+  text-transform: uppercase;
+}
+
+/* Larger than mobile */
+@media (min-width: 400px) {}
+
+/* Larger than phablet (also point when grid becomes active) */
+@media (min-width: 550px) {}
+
+/* Larger than tablet */
+@media (min-width: 750px) {}
+
+/* Larger than desktop */
+@media (min-width: 1000px) {}
+
+/* Larger than Desktop HD */
+@media (min-width: 1200px) {}
