@@ -1,11 +1,11 @@
 @import 'normalize.css';
-@import 'skeleton.css';
 @import 'fa-css/font-awesome.min.css';
 @import url('https://fonts.googleapis.com/css?family=Bitter|Raleway');
 
 /* blocks */
 
 @import 'taskbar.css';
+@import 'task.css';
 
 /* general */
 
@@ -35,14 +35,48 @@ button {
   text-transform: uppercase;
 }
 
+.container {
+  width: 80%;
+  margin: 0 auto;
+  max-width: 970px;
+}
+
+.col {
+  margin: 10px 20px;
+}
+
+.eight {
+  flex: 8 0 auto;
+}
+
+.four {
+  flex: 4 0 auto;
+}
+
+.row {
+  display: flex;
+}
+
+input:focus {
+  outline: 0;
+}
+
 /* Larger than mobile */
-@media (min-width: 400px) {}
+@media (min-width: 400px) {
+  .row {
+    flex-direction: column;
+  }
+}
 
 /* Larger than phablet (also point when grid becomes active) */
 @media (min-width: 550px) {}
 
 /* Larger than tablet */
-@media (min-width: 750px) {}
+@media (min-width: 750px) {
+  .row {
+    flex-direction: row;
+  }
+}
 
 /* Larger than desktop */
 @media (min-width: 1000px) {}

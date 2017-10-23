@@ -1,0 +1,57 @@
+* {
+  --yell: #FFFA6E;
+  --whitish: #F4F4F6;
+  --black: #2B2B2B;
+}
+
+.task-box {
+  overflow: hidden;
+}
+
+.task {
+  background: var(--black);
+  animation: slideDown .6s ease-in;
+  transform-origin: 0% 50%;
+  width: 100%;
+  padding: 10px 0;
+  line-height: 30px;
+  font-size: 24px !important;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+@keyframes slideDown {
+  0% {
+    transform: translateY(-60%) rotateX(-180deg);
+    opacity: 0.4;
+  }
+  70% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.task-text {
+  padding: 5px 7px;
+  max-width: 85%;
+  text-indent: 1em;
+  color: var(--yell);
+  flex: 100 0 auto;
+  word-wrap: break-word;
+  white-space: pre-wrap;
+}
+
+.task-btn {
+  text-align: center;
+  flex: 1 0 1em;
+  text-shadow: 2px 2px 3px var(--yell);
+  cursor: pointer;
+  opacity: 0.85;
+  color: var(--whitish);
+  transition-duration: .25s;
+}
+
+.task-btn:hover {
+  color: var(--yell);
+}

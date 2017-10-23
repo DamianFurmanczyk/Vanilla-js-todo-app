@@ -8,10 +8,13 @@
   line-height: 40px;
   font-size: 30px;
   margin-top: 10%;
+  margin-bottom: 40px;
 }
 
 .taskbar-inputbox {
+  overflow: hidden;
   position: relative;
+  height: 40px !important;
 }
 
 .taskbar-inputbox:hover > .taskbar-btn {
@@ -23,19 +26,51 @@
   color: var(--yell);
   border: 0px !important;
   background: transparent !important;
-  border-radius: 0px !important;
-  border-bottom: 2px solid var(--whitish) !important;
   box-sizing: border-box;
   width: 100%;
 }
 
+.taskbar-inputbox::after {
+  transition: .7s;
+  content: '';
+  position: absolute;
+  top: 100%;
+  width: 100%;
+  background: var(--yell);
+  height: 2px;
+  transform: translate(120%, -2px);
+}
+
+.taskbar-inputbox::before {
+  transition: .7s;
+  content: '';
+  position: absolute;
+  top: 100%;
+  width: 100%;
+  left: 0;
+  background: var(--whitish);
+  height: 2px;
+  transform: translateY(-2px);
+}
+
+.taskbar-inputbox.active::after
+ {
+transform:translate(0, -2px) !important;
+}
+
+.taskbar-inputbox.active::before
+ {
+transform:translate(-100%, -2px) !important;
+}
+
 .taskbar-input:focus + .taskbar-btn {
-  opacity: .6;
+  opacity: .4;
 }
 
 .taskbar-btn {
+  text-shadow: 2px 2px 3px var(--yell);
   cursor: pointer;
-  opacity: 0.3;
+  opacity: 0.6;
   color: var(--whitish);
   position: absolute;
   right: 10px;
